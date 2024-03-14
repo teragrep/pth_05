@@ -3,7 +3,7 @@ FROM centos:7
 RUN yum -y install java-11-openjdk \
     && yum clean all
 
-COPY docker/target/pth_05.rpm /
+COPY rpm/target/rpm/com.teragrep-pth_05/RPMS/x86_64/com.teragrep-pth_05-*.rpm /rpm/
 RUN yum install -y /pth_05.rpm
 
 ENV PTH_05_ENDPOINT="http://0.0.0.0:8080"

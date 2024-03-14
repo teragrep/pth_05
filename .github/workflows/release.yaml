@@ -38,7 +38,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          rpm/target/rpm/com.teragrep-pth_05/RPMS/noarch/com.teragrep-pth_05-*.noarch.rpm
+          rpm/target/rpm/com.teragrep-pth_05/RPMS/x86_64/com.teragrep-pth_05-*.rpm
           target/pth_05-jar-with-dependencies.jar
 
     - name: Set up Docker Buildx
@@ -56,5 +56,5 @@ jobs:
 
     - name: 'Build Image'
       run: |
-        docker buildx build --output type=docker --tag ghcr.io/${{ env.REPO_LC }}:${{ github.event.release.tag_name }} --tag ghcr.io/${{ env.REPO_LC }}:latest .
+        docker buildx build --output type=docker --tag ghcr.io/${{ env.REPO_LC }}:${{ github.event.release.tag_name }} --tag ghcr.io/${{ env.REPO_LC }}:latest . -f docker/Dockerfile
         docker push ghcr.io/${{ env.REPO_LC }} --all-tags
