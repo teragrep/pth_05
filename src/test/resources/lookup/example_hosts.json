@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "nomatch": "unknown",
+  "type": "string",
+  "table": [
+    {
+      "index": "example-host-one",
+      "value": true
+    },
+    {
+      "index": "example-host-two",
+      "value": true
+    }
+  ]
+}

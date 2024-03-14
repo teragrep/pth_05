@@ -1,0 +1,26 @@
+[
+  {
+    "group": "all-access",
+    "allowedIndexes": [
+      "*"
+    ]
+  },
+  {
+    "group": "root",
+    "allowedIndexes": [
+      "testtag"
+    ]
+  },
+  {
+    "group": "no-access",
+    "allowedIndexes": [
+      ""
+    ]
+  },
+  {
+    "group": "",
+    "allowedIndexes": [
+      "no-group"
+    ]
+  }
+]
