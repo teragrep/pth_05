@@ -30,7 +30,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build rpm
-      run: cd rpm/ && mvn --batch-mode -Drevision=${{ github.event.release.tag_name }} -Dsha1= -Dchangelist= -f rpm.pom.xml package
+      run: cd rpm/ && mvn --batch-mode -Drevision=${{ github.event.release.tag_name }} -Dsha1= -Dchangelist= package
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
