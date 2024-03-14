@@ -18,8 +18,8 @@
     <changelist>-SNAPSHOT</changelist>
     <sha1/>
     <teragrep.jue_01.version>0.4.3</teragrep.jue_01.version>
-    <teragrep.jai_01.version>1.1.0</teragrep.jai_01.version>
-    <teragrep.jai_02.version>0.2.0</teragrep.jai_02.version>
+    <teragrep.jai_01.version>2.0.2</teragrep.jai_01.version>
+    <teragrep.jai_02.version>1.0.2</teragrep.jai_02.version>
   </properties>
   <dependencies>
     <!-- unix-utils -->
