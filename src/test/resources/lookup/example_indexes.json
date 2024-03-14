@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "nomatch": "unknown",
+  "type": "string",
+  "table": [
+    {
+      "index": "example-tag-one",
+      "value": "example-tag-one"
+    },
+    {
+      "index": "example-tag-two",
+      "value": "example-tag-two"
+    }
+  ]
+}

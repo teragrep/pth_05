@@ -1,0 +1,17 @@
+[Unit]
+Description=com.teragrep.pth_05
+ConditionPathExists=/opt/teragrep/pth_05/share/pth_05-jar-with-dependencies.jar
+
+[Service]
+ExecStart=/usr/lib/jvm/jre-11-openjdk/bin/java \
+    -Xms512m \
+    -Xmx1024m \
+    -Dpth_05.propertiesFile=/opt/teragrep/pth_05/etc/pth_05.properties \
+    -Dlogback.configurationFile=/opt/teragrep/pth_05/etc/logback.xml \
+    -cp "/opt/teragrep/pth_05/share/*" \
+    com.teragrep.pth_05.Main
+User=srv-s3gw
+WorkingDirectory=/opt/teragrep/pth_05/etc
+
+[Install]
+WantedBy=multi-user.target
