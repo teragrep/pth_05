@@ -16,8 +16,7 @@ ENV PTH_05_PROVIDER_IDENTITY="default-identity"
 ENV PTH_05_PROVIDER_CREDENTIAL="default-credential"
 ENV PTH_05_PROVIDER_ENDPOINT="https://s3.default.tld:443"
 
-USER srv-s3gw
 COPY docker/docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
-
+USER srv-s3gw
 ENTRYPOINT ["/docker-entrypoint.sh"]
