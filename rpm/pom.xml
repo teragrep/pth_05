@@ -71,6 +71,10 @@
           <defaultGroupname>srv-s3gw</defaultGroupname>
           <defaultFilemode>0644</defaultFilemode>
           <defaultDirmode>0755</defaultDirmode>
+          <keyname>${env.RPM_SIGNING_KEYNAME}</keyname>
+          <keyPassphrase>
+            <passphrase>${env.RPM_SIGNING_PASSPHRASE}</passphrase>
+          </keyPassphrase>
           <mappings>
             <mapping>
               <directory>/usr/lib/systemd/system</directory>
@@ -153,7 +157,7 @@
             </mapping>
           </mappings>
           <requires>
-            <require>java-11-openjdk</require>
+            <require>java-11-openjdk-headless</require>
           </requires>
           <preinstallScriptlet>
             <script>
