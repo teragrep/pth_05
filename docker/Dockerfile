@@ -1,10 +1,7 @@
-FROM centos:7
+FROM rockylinux/rockylinux:9
 
-RUN yum -y install java-11-openjdk \
-    && yum clean all
-
-COPY rpm/target/rpm/com.teragrep-pth_05/RPMS/noarch/com.teragrep-pth_05-*.rpm /pth_05.rpm
-RUN yum install -y /pth_05.rpm && rm -f /pth_05.rpm && yum clean all
+COPY rpm/com.teragrep-pth_05-*.rpm /pth_05.rpm
+RUN dnf install -y /pth_05.rpm && rm -f /pth_05.rpm && dnf clean all
 
 ENV PTH_05_ENDPOINT="http://0.0.0.0:8080"
 ENV PTH_05_CREDENTIALS_FILE="/opt/teragrep/pth_05/etc/credentials.json"
